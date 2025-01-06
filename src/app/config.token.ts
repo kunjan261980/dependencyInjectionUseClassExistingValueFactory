@@ -1,7 +1,10 @@
 import { Inject, InjectionToken } from "@angular/core"
 
-export interface AppConfig{
-    testEnable: boolean
+export interface AppInjectionConfig{
+    testInjectionEnable: boolean
 }
 
-export const APP_CONFIG =  new InjectionToken<AppConfig>('appconfig')
+export const APP_INJECTION_CONFIG =  new InjectionToken<AppInjectionConfig>('appAppInjectionConfig',{
+    providedIn: "root",
+    factory:()=>({testInjectionEnable: false})
+})
