@@ -8,7 +8,7 @@ import { ExperimentalLoggerService } from './experimental-logger.service';
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers:[{provide: LoggerService , useClass: ExperimentalLoggerService}]
+  providers:[{provide: LoggerService , useExisting: ExperimentalLoggerService}]
 })
 export class AppComponent {
   title = 'angularTest';
